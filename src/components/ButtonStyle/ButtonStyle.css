@@ -1,0 +1,18 @@
+
+
+.button-style{
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: var(--color-primary);
+  transition: var(--transition-element);
+  color: #ffffff;
+  padding: .5rem 3rem;
+  font-size: 20px;
+  font-family: vazir;
+  width: fit-content;
+}
+
+.button-style:hover {
+  background-color: var(--color-secondary);
+}

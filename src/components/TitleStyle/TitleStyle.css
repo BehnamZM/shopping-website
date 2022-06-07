@@ -9,7 +9,8 @@
   position: relative;
   width: fit-content;
   padding: 1rem;
-  font-size: 40px;
+  font-size: 30px;
+  font-weight: 900;
 }
 
 .title-style::after , .title-style::before {

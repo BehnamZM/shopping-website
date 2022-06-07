@@ -24,7 +24,7 @@ body {
 :root {
   --color-primary: #abd373;
   --color-secondary: #333333;
-  --color-light: #ffdbe7;
+  --color-light: #eee;
   --box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
   --container-width-lg: 75%;
   --container-width-md: 85%;
