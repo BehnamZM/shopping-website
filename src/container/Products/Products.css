@@ -4,11 +4,15 @@
   background-color: var(--color-light);
 }
 
+.products .products-title{
+  padding-top: 6rem;
+}
+
 .products .products-body{
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 1rem;
-  margin: 2rem auto;
+  margin: 4rem auto;
 } 
 
 .products .products-body .products-inner {}

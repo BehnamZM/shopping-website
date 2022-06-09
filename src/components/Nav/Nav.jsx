@@ -50,7 +50,7 @@ function Nav() {
 
   return (
     <>
-      <nav className={navbar ? 'fixed-nav' : ''}>
+      <nav className={navbar ? 'fixed-nav' : ''} style={{transition: "all .3s ease"}}>
         <div className="nav-part-one container">
           <div className="icons-part">
             <div className="nav-icon menu-icon" onClick={showNavbarHandler}>

@@ -2,8 +2,8 @@
 "products": [
     {
       "id": 1,
-      "title": "",
-      "image": "./assets/sanseveria (1).jpg",
+      "title": "سانسوریا",
+      "image": "./src/assets/sanseveria (1).jpg",
       "categury": "آپارتمانی",
       "price": "390,000",
       "countInStock": "5",
@@ -15,7 +15,7 @@
     {
       "id": 2,
       "title": "سانسوریا",
-      "image": "./assets/sanseveria (2).jpg",
+      "image": "./src/assets/sanseveria (2).jpg",
       "categury": "آپارتمانی",
       "price": "420,000",
       "countInStock": "2",
@@ -27,7 +27,7 @@
     {
       "id": 3,
       "title": "سانسوریا",
-      "image": "./assets/sanseveria (5).jpg",
+      "image": "./src/assets/sanseveria (5).jpg",
       "categury": "آپارتمانی",
       "price": "340,000",
       "countInStock": "12",
@@ -39,7 +39,7 @@
     {
       "id": 4,
       "title": "سانسوریا",
-      "image": "./assets/sanseveria (6).jpg",
+      "image": "./src/assets/sanseveria (6).jpg",
       "categury": "آپارتمانی",
       "price": "560,000",
       "countInStock": "0",
@@ -51,7 +51,7 @@
     {
       "id": 5,
       "title": "سانسوریا",
-      "image": "./assets/sanseveria (7).jpg",
+      "image": "./src/assets/sanseveria (7).jpg",
       "categury": "آپارتمانی",
       "price": "290,000",
       "countInStock": "30",
@@ -63,7 +63,7 @@
     {
       "id": 6,
       "title": "سانسوریا",
-      "image": "./assets/sanseveria(8).png",
+      "image": "./src/assets/sanseveria(8).png",
       "categury": "آپارتمانی",
       "price": "400,000",
       "countInStock": "3",
@@ -75,7 +75,7 @@
     {
       "id": 7,
       "title": "بنجامین",
-      "image": "./assets/benjamin1.jpg",
+      "image": "./src/assets/benjamin1.jpg",
       "categury": "آپارتمانی",
       "price": "790,000",
       "countInStock": "5",
@@ -87,7 +87,7 @@
     {
       "id": 8,
       "title": "بنجامین",
-      "image": "./assets/benjamin2.png",
+      "image": "./src/assets/benjamin2.png",
       "categury": "آپارتمانی",
       "price": "640,000",
       "countInStock": "6",
@@ -99,7 +99,7 @@
     {
       "id": 9,
       "title": "آدنیوم عربیکم",
-      "image": "./assets/adeniom.jpg",
+      "image": "./src/assets/adeniom.jpg",
       "categury": "آپارتمانی",
       "price": "650,000",
       "countInStock": "40",

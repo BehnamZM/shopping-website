@@ -3,6 +3,7 @@
   overflow: hidden;
   gap: .3rem;
   transition: var(--transition-element);
+  background-color: #ffffff;
 }
 
 .product:hover {
@@ -17,13 +18,14 @@
 
 .product .product-inner .product-img{
   width: 100%;
-  height: 70%;
+  height: 200px;
   position: relative;
 }
 
 .product .product-inner .product-img img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .product .product-inner .product-img .product-controls {

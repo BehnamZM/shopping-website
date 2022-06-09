@@ -81,8 +81,8 @@ footer .footer-body .our-services{
 
 }
 
-footer .footer-body .our-services .footer-services-items{
-  
+footer .footer-body .our-services > .footer-services-items{
+  padding: 0;
 }
 
 footer .footer-body .our-services .footer-services-items .footer-services-item{

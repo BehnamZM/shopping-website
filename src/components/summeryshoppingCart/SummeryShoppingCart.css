@@ -6,7 +6,7 @@
   height: 100vh;
   background-color: #ffffff;
   overflow-y: scroll;
-  z-index: 100;
+  z-index: 1100;
   transition: var(--transition-element);
 }
 
@@ -79,5 +79,5 @@
   left: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 99;
+  z-index: 1010;
 }

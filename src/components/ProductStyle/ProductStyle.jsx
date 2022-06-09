@@ -5,13 +5,13 @@ import { GiShoppingCart } from 'react-icons/gi'
 import { AiOutlineHeart } from 'react-icons/ai'
 import { RiSearchEyeLine } from 'react-icons/ri'
 
-function ProductStyle() {
+function ProductStyle(props) {
   return (
     <>
       <div className="product">
         <div className="product-inner">
           <div className="product-img">
-            <img src="/src/assets/3456x2304_20449186-min (2).jpg" alt="product" />
+            <img src={props.image} alt="product" />
             <div className="product-controls">
               <div className="add-to-cart product-control-icon">
                 <GiShoppingCart />
@@ -24,15 +24,18 @@ function ProductStyle() {
               </div>
             </div>
           </div>
-          <h4 className="product-title">سانسوریا</h4>
-          <div className="product-price">390,000 تومان</div>
+          <h4 className="product-title">{props.title}</h4>
+          <div className="product-price">{props.price} تومان</div>
           <div className="product-rating-and-stock">
-            <p className="Available-in-stock">موجود در انبار</p>
-
+            {
+              props.countInStock > 0 ? 
+              <p className="Available-in-stock" style={{color:'green'}}>موجود در انبار</p> :
+              <p className="Available-in-stock" style={{color:'red'}}>ناموجود</p>
+            }
             
             <div className="product-rating">
               <GrStar className="product-rating-icon" />
-              <p>4.5</p>
+              <p>{props.rating}</p>
             </div>
           </div>
         </div>

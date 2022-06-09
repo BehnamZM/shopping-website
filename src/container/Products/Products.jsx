@@ -1,12 +1,22 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import './Products.css'
 import {FaThList} from 'react-icons/fa'
 import {CgMenuGridR} from 'react-icons/cg'
 import TitleStyle from '../../components/TitleStyle/TitleStyle'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import ProductStyle from '../../components/ProductStyle/ProductStyle'
+import axios from 'axios'
 
 function Products() {
+  const [products,setProducts] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get('https://shopping-website-project-8486a-default-rtdb.firebaseio.com/products.json')
+      setProducts(result.data);
+    }
+    fetchData()
+  },[])
   return (
     <div className="products">
       <div className="products-title">
@@ -30,12 +40,12 @@ function Products() {
             </div>
           </div>
           <div className="products-list">
-            <ProductStyle />
-            <ProductStyle />
-            <ProductStyle />
-            <ProductStyle />
-            <ProductStyle />
-            <ProductStyle />
+            {
+              products.map(product => (
+                <ProductStyle {...product} key={product.id}/>
+              ))
+            }
+            
           </div>
         </div>
       </div>

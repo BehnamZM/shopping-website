@@ -6,7 +6,6 @@ nav {
   width: 100vw;
   padding: 1rem 0;
   background-color: #ffffff;
-
 }
 
 /* when srollY is more than 200 => fixed class will be render */
@@ -16,6 +15,10 @@ nav {
   top: 0;
   right: 0;
   z-index: 1000;
+}
+
+nav.fixed-nav{
+  min-height: 50px;
 }
 
 
