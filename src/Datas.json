@@ -1,11 +1,18 @@
 {
 "products": [
     {
-      "id": 1,
+      "id": "0",
       "title": "سانسوریا",
-      "image": "./src/assets/sanseveria (1).jpg",
+      "slug": "sanseveria1",
+      "image": [
+        "./src/assets/sanseveria (1).jpg",
+        "./src/assets/sanseveria (2).jpg",
+        "./src/assets/sanseveria (5).jpg",
+        "./src/assets/sanseveria (6).jpg",
+        "./src/assets/sanseveria (7).jpg"
+      ],
       "categury": "آپارتمانی",
-      "price": "390,000",
+      "price": "390000",
       "countInStock": "5",
       "brand": "pronia",
       "rating": "4.3",
@@ -13,11 +20,18 @@
       "description": "گیاه سانسوریا جزو زیباترین و در عین حال مقاوم ترین نوع گیاهان آپارتمانی محسوب میشود و شما عزیزان هم اکنون میتوانید این گیاه را از سایت پرونیا تهیه کنید."
     },
     {
-      "id": 2,
+      "id": "1",
       "title": "سانسوریا",
-      "image": "./src/assets/sanseveria (2).jpg",
+      "slug": "sanseveria2",
+      "image": [
+        "./src/assets/sanseveria (2).jpg",
+        "./src/assets/sanseveria (2).jpg",
+        "./src/assets/sanseveria (2).jpg",
+        "./src/assets/sanseveria (2).jpg",
+        "./src/assets/sanseveria (2).jpg"
+      ],
       "categury": "آپارتمانی",
-      "price": "420,000",
+      "price": "420000",
       "countInStock": "2",
       "brand": "pronia",
       "rating": "4.4",
@@ -25,11 +39,18 @@
       "description": "گیاه سانسوریا جزو زیباترین و در عین حال مقاوم ترین نوع گیاهان آپارتمانی محسوب میشود و شما عزیزان هم اکنون میتوانید این گیاه را از سایت پرونیا تهیه کنید."
     },
     {
-      "id": 3,
+      "id": "2",
       "title": "سانسوریا",
-      "image": "./src/assets/sanseveria (5).jpg",
+      "slug": "sanseveria3",
+      "image": [
+        "./src/assets/sanseveria (5).jpg",
+        "./src/assets/sanseveria (5).jpg",
+        "./src/assets/sanseveria (5).jpg",
+        "./src/assets/sanseveria (5).jpg",
+        "./src/assets/sanseveria (5).jpg"
+      ],
       "categury": "آپارتمانی",
-      "price": "340,000",
+      "price": "340000",
       "countInStock": "12",
       "brand": "pronia",
       "rating": "4.1",
@@ -37,11 +58,18 @@
       "description": "گیاه سانسوریا جزو زیباترین و در عین حال مقاوم ترین نوع گیاهان آپارتمانی محسوب میشود و شما عزیزان هم اکنون میتوانید این گیاه را از سایت پرونیا تهیه کنید."
     },
     {
-      "id": 4,
+      "id": "3",
       "title": "سانسوریا",
-      "image": "./src/assets/sanseveria (6).jpg",
+      "slug": "sanseveria4",
+      "image": [
+        "./src/assets/sanseveria (6).jpg",
+        "./src/assets/sanseveria (6).jpg",
+        "./src/assets/sanseveria (6).jpg",
+        "./src/assets/sanseveria (6).jpg",
+        "./src/assets/sanseveria (6).jpg"
+      ],
       "categury": "آپارتمانی",
-      "price": "560,000",
+      "price": "560000",
       "countInStock": "0",
       "brand": "pronia",
       "rating": "3.9",
@@ -49,11 +77,18 @@
       "description": "گیاه سانسوریا جزو زیباترین و در عین حال مقاوم ترین نوع گیاهان آپارتمانی محسوب میشود و شما عزیزان هم اکنون میتوانید این گیاه را از سایت پرونیا تهیه کنید."
     },
     {
-      "id": 5,
+      "id": "4",
       "title": "سانسوریا",
-      "image": "./src/assets/sanseveria (7).jpg",
+      "slug": "sanseveria5",
+      "image": [
+        "./src/assets/sanseveria (7).jpg",
+        "./src/assets/sanseveria (7).jpg",
+        "./src/assets/sanseveria (7).jpg",
+        "./src/assets/sanseveria (7).jpg",
+        "./src/assets/sanseveria (7).jpg"
+      ],
       "categury": "آپارتمانی",
-      "price": "290,000",
+      "price": "290000",
       "countInStock": "30",
       "brand": "pronia",
       "rating": "4",
@@ -61,11 +96,18 @@
       "description": "گیاه سانسوریا جزو زیباترین و در عین حال مقاوم ترین نوع گیاهان آپارتمانی محسوب میشود و شما عزیزان هم اکنون میتوانید این گیاه را از سایت پرونیا تهیه کنید."
     },
     {
-      "id": 6,
+      "id": "5",
       "title": "سانسوریا",
-      "image": "./src/assets/sanseveria(8).png",
+      "slug": "sanseveria6",
+      "image": [
+        "./src/assets/sanseveria(8).png",
+        "./src/assets/sanseveria(8).png",
+        "./src/assets/sanseveria(8).png",
+        "./src/assets/sanseveria(8).png",
+        "./src/assets/sanseveria(8).png"
+      ],
       "categury": "آپارتمانی",
-      "price": "400,000",
+      "price": "400000",
       "countInStock": "3",
       "brand": "pronia",
       "rating": "3.8",
@@ -73,11 +115,18 @@
       "description": "گیاه سانسوریا جزو زیباترین و در عین حال مقاوم ترین نوع گیاهان آپارتمانی محسوب میشود و شما عزیزان هم اکنون میتوانید این گیاه را از سایت پرونیا تهیه کنید."
     },
     {
-      "id": 7,
+      "id": "6",
       "title": "بنجامین",
-      "image": "./src/assets/benjamin1.jpg",
+      "slug": "benjamin1",
+      "image": [
+        "./src/assets/benjamin1.jpg",
+        "./src/assets/benjamin1.jpg",
+        "./src/assets/benjamin1.jpg",
+        "./src/assets/benjamin1.jpg",
+        "./src/assets/benjamin1.jpg"
+      ],
       "categury": "آپارتمانی",
-      "price": "790,000",
+      "price": "790000",
       "countInStock": "5",
       "brand": "pronia",
       "rating": "4.2",
@@ -85,11 +134,18 @@
       "description": "گیاه بنجامین جزو زیباترین و در عین حال مقاوم ترین نوع گیاهان آپارتمانی محسوب میشود و شما عزیزان هم اکنون میتوانید این گیاه را از سایت پرونیا تهیه کنید."
     },
     {
-      "id": 8,
+      "id": "7",
       "title": "بنجامین",
-      "image": "./src/assets/benjamin2.png",
+      "slug": "benjamin8",
+      "image": [
+        "./src/assets/benjamin2.png",
+        "./src/assets/benjamin2.png",
+        "./src/assets/benjamin2.png",
+        "./src/assets/benjamin2.png",
+        "./src/assets/benjamin2.png"
+      ],
       "categury": "آپارتمانی",
-      "price": "640,000",
+      "price": "640000",
       "countInStock": "6",
       "brand": "pronia",
       "rating": "3.6",
@@ -97,11 +153,18 @@
       "description": "گیاه بنجامین جزو زیباترین و در عین حال مقاوم ترین نوع گیاهان آپارتمانی محسوب میشود و شما عزیزان هم اکنون میتوانید این گیاه را از سایت پرونیا تهیه کنید."
     },
     {
-      "id": 9,
+      "id": "8",
       "title": "آدنیوم عربیکم",
-      "image": "./src/assets/adeniom.jpg",
+      "slug": "adeniom",
+      "image": [
+        "./src/assets/adeniom.jpg",
+        "./src/assets/adeniom.jpg",
+        "./src/assets/adeniom.jpg",
+        "./src/assets/adeniom.jpg",
+        "./src/assets/adeniom.jpg"
+      ],
       "categury": "آپارتمانی",
-      "price": "650,000",
+      "price": "650000",
       "countInStock": "40",
       "brand": "pronia",
       "rating": "4.5",

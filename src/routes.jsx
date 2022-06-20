@@ -18,7 +18,7 @@ let routes = [
   { path: '/blog', element: <Blog /> },
   { path: '/cart', element: <CartPage /> },
   { path: '/Login-register', element: <LoginOrRegister /> },
-  { path: '/product/:productId', element: <MainProduct /> },
+  { path: '/product/:slug', element: <MainProduct /> },
 ]
 
 export default routes

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './Nav.css'
 import { Link } from 'react-router-dom'
 import { FiPhoneCall } from 'react-icons/fi'
@@ -11,9 +11,13 @@ import { IoIosArrowDown } from 'react-icons/io'
 import Dropdown from '../Dropdown/Dropdown'
 import Searchbox from '../searchbox/Searchbox'
 import SummeryshoppingCart from '../summeryshoppingCart/SummeryShoppingCart'
+import logo from '../../assets/logo.png'
+import { Store } from '../../Store'
 
 
 function Nav() {
+  const { state } = useContext(Store)
+  const { cart } = state
   const [showNavbar, setShowNavbar] = useState(false)
   const [showSubmenu, setShowSubmenu] = useState(false)
   const [showSearchbox, setShowSearchbox] = useState(false)
@@ -50,7 +54,7 @@ function Nav() {
 
   return (
     <>
-      <nav className={navbar ? 'fixed-nav' : ''} style={{transition: "all .3s ease"}}>
+      <nav className={navbar ? 'fixed-nav' : ''} style={{ transition: "all .3s ease" }}>
         <div className="nav-part-one container">
           <div className="icons-part">
             <div className="nav-icon menu-icon" onClick={showNavbarHandler}>
@@ -58,7 +62,7 @@ function Nav() {
             </div>
             <div className="nav-icon shopping-icon" onClick={showShoppingCardHandler}>
               <HiOutlineShoppingBag className='icon' />
-              <span>0</span>
+              <span>{cart.cartItems.reduce ((acc,cur) => acc + cur.quantity , 0)}</span>
             </div>
             <Link to='/login-register'>
               <div className="nav-icon user-icon">
@@ -70,7 +74,7 @@ function Nav() {
             </div>
           </div>
           <div className="logo-part">
-            <img src="/src/assets/logo.png" />
+            <img src={logo} />
           </div>
           <div className="call-with-us">
             <span>+98 9201236547</span>

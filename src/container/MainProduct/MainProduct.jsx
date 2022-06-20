@@ -1,14 +1,77 @@
-import React from 'react'
+import React, { useContext, useEffect, useReducer, useState } from "react";
 import './MainProduct.css'
 import TitleStyle from '../../components/TitleStyle/TitleStyle'
 import Buttonstyle from '../../components/Buttonstyle/Buttonstyle'
 import ProductStyle from '../../components/ProductStyle/ProductStyle'
+import { Link, useParams, Navigate, useNavigate } from 'react-router-dom'
+import MainProductSlider from './MainProductSlider/MainProductSlider'
+import axios from 'axios'
+import Preload from "../../components/Preload/Preload";
+import Rating from "../../components/Rating/Rating";
+import { Store } from "../../Store";
+import { RiRestaurantLine } from "react-icons/ri";
 
-import { GrStar } from 'react-icons/gr'
-import { Link, useParams, Navigate } from 'react-router-dom'
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'FETCH_REQUEST':
+      return { ...state, loading: true };
+    case 'FETCH_SUCCESS':
+      return { ...state, loading: false, product: action.payload };
+    case 'FETCH_FAIL':
+      return { ...state, loading: false, error: action.payload };
+    default:
+      return state;
+  }
+}
+
 
 function MainProduct() {
+  const navigate = useNavigate()
+
+  const [{ loading, error, product }, dispatch] = useReducer(reducer, {
+    product: [],
+    loading: true,
+    error: ''
+  })
+
   let params = useParams()
+  const { slug } = params
+
+  useEffect(() => {
+    const fetchData = async () => {
+      dispatch({ type: 'FETCH_REQUEST' });
+      try {
+        const result = await axios.get('https://shopping-website-project-8486a-default-rtdb.firebaseio.com/products.json')
+        const selectProduct = result.data.find(item => {
+          return item.slug === params.slug
+        })
+        dispatch({ type: 'FETCH_SUCCESS', payload: selectProduct })
+      } catch (err) {
+        dispatch({ type: 'FETCH_FAIL', payload: err.massage })
+      }
+    }
+    fetchData()
+  }, [slug])
+
+
+
+  const { state, dispatch: ctxDispatch } = useContext(Store)
+  const {cart} = state
+  const addToCartHandler =async () => {
+    const existItem = cart.cartItems.find(item => item.id === product.id)
+    const quantity = existItem ? existItem.quantity + 1 : 1
+    const {data} =await axios.get(`https://shopping-website-project-8486a-default-rtdb.firebaseio.com/products/${product.id}.json`)
+    if(data.countInStock < quantity) {
+      window.alert('در انبار این تعداد موجودی نداریم')
+      return;
+    }
+    ctxDispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity } })
+    navigate('/cart')
+    
+  }
+
+
   return (
     <div className="main-product">
       <div className="main-product-title">
@@ -16,50 +79,61 @@ function MainProduct() {
           جزئیات محصول
         </TitleStyle>
       </div>
-      <div className="main-product-body container">
-        <div className="product-slider">
+      {
+        loading ? <Preload /> :
+          error ? (<alert>{error}</alert>) : (
+            <>
+              <div className="main-product-body container">
+                <div className="product-slider">
+                  <MainProductSlider img={product.image} />
+                </div>
+                <div className="product-infos">
+                  <h4 className="product-title">{product.title}</h4>
+                  <div className="product-price">{product.price} تومان</div>
+                  <div className="product-reviews">
 
-        </div>
-        <div className="product-infos">
-          <h4 className="product-title">سانسوریا</h4>
-          <div className="product-price">390,000 تومان</div>
-          <div className="product-reviews">
+                    <div className="product-stars">
+                      <Rating rating={product.rating} />
+                    </div>
+                    ({product.numReviews} مرور)
+                  </div>
+                  <div className="product-des">
+                    <p>{product.description}</p>
+                  </div>
+                  <div className="product-actions">
+                    <div className="control-product-count">
+                      <div className="product-plus">+</div>
+                      <div className="product-count">1</div>
+                      <div className="product-minus">-</div>
+                    </div>
+                    {
+                      product.countInStock > 0 &&
+                      <div onClick={addToCartHandler}>
+                      <Buttonstyle>
+                        افزودن به سبد خرید
+                      </Buttonstyle>
+                      </div>
+                    }
 
-            <div className="product-stars">
-              <GrStar />
-              <GrStar />
-              <GrStar />
-              <GrStar />
-              <GrStar />
-            </div>
-            (10 مرور)
-          </div>
-          <div className="product-des">
-            <p>گیاه سانسوریا جزو زیباترین و در عین حال مقاوم ترین نوع گیاهان آپارتمانی محسوب میشود و شما عزیزان هم اکنون میتوانید این گیاه را از سایت پرونیا تهیه کنید.</p>
-          </div>
-          <div className="product-actions">
-            <div className="control-product-count">
-              <div className="product-plus">+</div>
-              <div className="product-count">1</div>
-              <div className="product-minus">-</div>
-            </div>
-            <Buttonstyle>
-              افزودن به سبد خرید
-            </Buttonstyle>
-          </div>
-        </div>
-      </div>
-      <div className="related-products container">
-        <TitleStyle>
-          محصولات مشابه
-        </TitleStyle>
-        <div className="related-products-list">
-          <ProductStyle />
-          <ProductStyle />
-          <ProductStyle />
-          <ProductStyle />
-        </div>
-      </div>
+
+                  </div>
+                </div>
+              </div>
+              <div className="related-products container">
+                <TitleStyle>
+                  محصولات مشابه
+                </TitleStyle>
+                <div className="related-products-list">
+                  <ProductStyle />
+                  <ProductStyle />
+                  <ProductStyle />
+                  <ProductStyle />
+                </div>
+              </div>
+            </>
+          )
+      }
+
     </div>
   )
 }
